@@ -6,7 +6,7 @@
 
 ## **Why UUPID?**
 
-Traditional UUIDs (like a1b2c3d4-e5f6-7890-1234-567890abcdef) are excellent for machines, offering unmatched uniqueness for distributed systems. But for humans, they're a headache:
+Traditional UUIDs (like `a1b2c3d4-e5f6-7890-1234-567890abcdef`) are excellent for machines, offering unmatched uniqueness for distributed systems. But for humans, they're a headache:
 
 * **Hard to Read:** A jumble of numbers and letters.  
 * **Impossible to Remember:** They have no inherent meaning or structure.  
@@ -64,27 +64,27 @@ UUPIDs offer a substantial leap in usability for humans with virtually no change
 
 These examples use 2, 3, and 4-letter units, with their casing preserved as defined in the dictionary, and hyphenated.
 
-1. GOLD-En-Riva-Swif-Tide-Blom-Eria-Shor-Line-Vist (39 characters)  
-2. CYBR-Quest-Logi-Grid-Fush-Code-Nexa-Prim-View-Poin (39 characters)  
-3. AQUA-Flum-PLEX-STUN-rela-CREA-moRA-NOMI-COda-pure (39 characters)  
-4. VENT-Ure-PATH-trek-FIND-more-AUra-ZONE-link-STAR (39 characters)
+1. `GOLD-En-Riva-Swif-Tide-Blom-Eria-Shor-Line-Vist` (39 characters)  
+2. `CYBR-Quest-Logi-Grid-Fush-Code-Nexa-Prim-View-Poin` (39 characters)  
+3. `AQUA-Flum-PLEX-STUN-rela-CREA-moRA-NOMI-COda-pure` (39 characters)  
+4. `VENT-Ure-PATH-trek-FIND-more-AUra-ZONE-link-STAR` (39 characters)
 
 ## **Usage**
 
 This repository currently contains the **specification and design documents** for the UUPID standard. The reference implementation for generating and validating UUPIDs is under development.  
 Once complete, this section will provide detailed instructions and code examples for using the UUPID library in various programming languages.  
+
+```js
 // Example of what the code might look like (Node.js)  
-/\*  
 const uupid\_lib \= require('uupid-generator');
 
 // Generate a new UUPID  
 const newUUPID \= uupid\_lib.generate();  
 console.log(\`Generated UUPID: ${newUUPID}\`);
 
-// UUPID does not include a built-in checksum.  
 // If error detection is required for your use case,  
 // it should be implemented at the application level.  
-\*/
+```
 
 ## **Installation**
 
