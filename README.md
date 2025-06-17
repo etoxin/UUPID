@@ -15,7 +15,7 @@ To ensure clarity and precision throughout this document, the following key term
 
 ## **Why UUPID?**
 
-Traditional UUIDs (like a1b2c3d4-e5f6-7890-1234-567890abcdef) are excellent for machines, offering unmatched uniqueness for distributed systems. But for humans, they're a headache:
+Traditional UUIDs (like `a1b2c3d4-e5f6-7890-1234-567890abcdef`) are excellent for machines, offering unmatched uniqueness for distributed systems. But for humans, they're a headache:
 
 * **Hard to Read:** A jumble of numbers and letters.  
 * **Impossible to Remember:** They have no inherent meaning or structure.  
@@ -141,10 +141,10 @@ The UUPID standard is designed with future adaptability in mind, but it's import
 
 These examples use 2, 3, and 4-letter units, with their casing preserved as defined in the dictionary, and hyphenated.
 
-1. GOLD-En-Riva-Swif-Tide-Blom-Eria-Shor-Line-Vist (39 characters)  
-2. CYBR-Quest-Logi-Grid-Fush-Code-Nexa-Prim-View-Poin (39 characters)  
-3. AQUA-Flum-PLEX-STUN-rela-CREA-moRA-NOMI-COda-pure (39 characters)  
-4. VENT-Ure-PATH-trek-FIND-more-AUra-ZONE-link-STAR (39 characters)
+1. `GOLD-En-Riva-Swif-Tide-Blom-Eria-Shor-Line-Vist` (39 characters)  
+2. `CYBR-Quest-Logi-Grid-Fush-Code-Nexa-Prim-View-Poin` (39 characters)  
+3. `AQUA-Flum-PLEX-STUN-rela-CREA-moRA-NOMI-COda-pure` (39 characters)  
+4. `VENT-Ure-PATH-trek-FIND-more-AUra-ZONE-link-STAR` (39 characters)
 
 ## **Usage**
 
@@ -157,8 +157,8 @@ JavaScript
 const uupid\_lib \= require('uupid-generator');
 
 // Generate a new UUPID  
-const newUUPID \= uupid\_lib.generate();  
-console.log(\`Generated UUPID: ${newUUPID}\`); // AQUA-Flum-PLEX-STUN-rela-CREA-moRA-NOMI-COda-pure
+const newUUPID = uupid_lib.generate();  
+console.log(`Generated UUPID: ${newUUPID}`); // AQUA-Flum-PLEX-STUN-rela-CREA-moRA-NOMI-COda-pure
 
 ## **Installation**
 
