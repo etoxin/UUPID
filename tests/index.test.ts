@@ -38,7 +38,7 @@ describe('Generate Function', () => {
     });
   });
 
-  it('should generate different UUPIDs on 10,000,000 calls', () => {
+  it('should generate unique UUPIDs', () => {
     const UUPID_SET_SIZE = 10_000_000;
     const result = new Set();
     for (let step = 0; step < UUPID_SET_SIZE; step++) {
@@ -46,6 +46,18 @@ describe('Generate Function', () => {
       result.add(generate());
     }
     assert.strictEqual(result.size, UUPID_SET_SIZE)
+  });
+
+  it('should generate different UUPIDs on successive calls (high probability)', () => {
+    // Due to the nature of random numbers, there's a theoretical chance of collision,
+    // but with CSPRNG and sufficient entropy, it should be extremely rare.
+    // We'll generate a few and check for uniqueness.
+    const uupid1 = generate();
+    const uupid2 = generate();
+    const uupid3 = generate();
+    assert.notStrictEqual(uupid1, uupid2, 'Consecutive UUPIDs should be different');
+    assert.notStrictEqual(uupid1, uupid3, 'Consecutive UUPIDs should be different');
+    assert.notStrictEqual(uupid2, uupid3, 'Consecutive UUPIDs should be different');
   });
 
   it('should return a valid UUPID', () => {
