@@ -1,7 +1,7 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert';
 
-import { helloWorld, goodBye } from '../src/index.ts';
+import { generate, isValid } from '../src/index.ts';
 import npmPackage from '../src/index.ts';
 
 describe('NPM Package', () => {
@@ -9,31 +9,35 @@ describe('NPM Package', () => {
     assert.strictEqual(typeof npmPackage, 'object');
   });
 
-  it('should have a helloWorld property', () => {
-    assert.deepStrictEqual(Object.keys(npmPackage), ['helloWorld', 'goodBye']);
+  it('should have a generate,isValid property', () => {
+    assert.deepStrictEqual(Object.keys(npmPackage), ['generate', 'isValid']);
   });
 });
 
-describe('Hello World Function', () => {
+describe('Generate Function', () => {
   it('should be a function', () => {
-    assert.strictEqual(typeof helloWorld, 'function');
+    assert.strictEqual(typeof generate, 'function');
   });
 
-  it('should return the hello world message', () => {
-    const expected = 'Hello World from my example modern npm package!';
-    const actual = helloWorld();
-    assert.equal(actual, expected);
+  it('should return a valid UUPID', () => {
+    const actual = generate();
+    assert.equal(isValid(actual), true);
   });
 });
 
-describe('Goodbye Function', () => {
+describe('isValid Function', () => {
   it('should be a function', () => {
-    assert.strictEqual(typeof goodBye, 'function');
+    assert.strictEqual(typeof isValid, 'function');
   });
 
-  it('should return the goodbye message', () => {
-    const expected = 'Goodbye from my example modern npm package!';
-    const actual = goodBye();
-    assert.equal(actual, expected);
+  it('should be truthy when given an valid UUPID', () => {
+    const gen_UUPID = generate();
+    console.log(gen_UUPID)
+    assert.equal(isValid(gen_UUPID), true);
+  });
+
+  it('should be falsey when given an invalid UUPID', () => {
+    const actual = isValid('this is an invalid UUPID');
+    assert.equal(isValid(actual), false);
   });
 });

@@ -116,23 +116,17 @@ function generate(): string {
  * @param {string} uupidString - The string to validate.
  * @returns {boolean} True if the string is a valid UUPID, false otherwise.
  */
-function isValid(uupidString: string) {
-  if (typeof uupidString !== 'string') {
-    return false;
-  }
+function isValid(uupidString: string): boolean {
+  if (typeof uupidString !== 'string') return false;
 
   const segments = uupidString.split('-');
 
   // Check if the number of segments matches.
-  if (segments.length !== NUM_UNITS) {
-    return false;
-  }
+  if (segments.length !== NUM_UNITS) return false;
 
   // Check if each segment is present in the dictionary with correct casing.
   for (const segment of segments) {
-    if (!UUPID_DICTIONARY.includes(segment)) {
-      return false; // Segment not found in dictionary or casing is incorrect.
-    }
+    if (!UUPID_DICTIONARY.includes(segment)) return false;
   }
 
   return true;
