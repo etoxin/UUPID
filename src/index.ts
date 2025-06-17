@@ -134,6 +134,8 @@ function isValid(uupidString: string): boolean {
 
 // Export the functions for use as an NPM module.
 module.exports = {
+  UUPID_DICTIONARY,
+  NUM_UNITS,
   generate,
-  isValid
+  isValid,
 };
