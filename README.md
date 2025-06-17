@@ -52,6 +52,7 @@ A UUPID string will generally be **between 35 and 39 characters in length**.
 | **Readability** | Poor (abstract hex) | **Excellent (pronounceable words)** |
 | **Memorability** | None | **High** |
 | **Pronounceable** | No | **Yes** |
+| **Alphabet / Unit Set Size** | 16 (hexadecimal digits) | 8,192 - 16,384 (pronounceable units) |
 | **Entropy (Random)** | \~122 bits | **\~126 bits** |
 | **Error Detection** | None built-in | None built-in |
 | **Length** | 36 characters (with hyphens) | **35 \- 39 characters** |
