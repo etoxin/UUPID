@@ -1,0 +1,52 @@
+{
+  "name": "uupid",
+  "version": "1.0.0",
+  "description": "Human-Friendly Identifiers That Just Work",
+  "main": "index.js",
+  "scripts": {
+    "clean": "del-cli ./lib",
+    "build": "npm run clean && tsc -p ./tsconfig.json",
+    "test": "node --experimental-strip-types --test",
+    "semantic-release": "semantic-release",
+    "prepack": "npm run build"
+  },
+    "release": {
+    "branches": [
+      "main"
+    ],
+    "dryRun": true,
+    "plugins": [
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ]
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etoxin/UUPID.git"
+  },
+  "keywords": [
+    "id",
+    "uuid",
+    "guid",
+    "uupid"
+  ],
+  "author": "Adam Lusted (etoxin)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/etoxin/UUPID/issues"
+  },
+  "homepage": "https://github.com/etoxin/UUPID#readme",
+  "dependencies": {
+    "@types/node": "^24.0.3",
+    "del-cli": "^6.0.0",
+    "semantic-release": "^24.2.5",
+    "typescript": "^5.8.3"
+  }
+}
