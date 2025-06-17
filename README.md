@@ -153,12 +153,14 @@ Once complete, this section will provide detailed instructions and code examples
 
 JavaScript
 
+```js
 // Example of what the code might look like (Node.js)  
 const uupid\_lib \= require('uupid-generator');
 
 // Generate a new UUPID  
 const newUUPID = uupid_lib.generate();  
 console.log(`Generated UUPID: ${newUUPID}`); // AQUA-Flum-PLEX-STUN-rela-CREA-moRA-NOMI-COda-pure
+```
 
 ## **Installation**
 
