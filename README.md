@@ -172,7 +172,7 @@ We welcome contributions to the UUPID standard and its reference implementations
 
 ## **License**
 
-This project is licensed under the([http://docs.google.com/LICENSE.md](http://docs.google.com/LICENSE.md)) \- see the LICENSE.md file for details.
+This project is MIT licensed.
 
 #### **Works cited**
 
