@@ -172,7 +172,7 @@ We welcome contributions to the UUPID standard and its reference implementations
 
 ## **License**
 
-This project is MIT licensed.
+This project is [MIT licensed](./LICENSE).
 
 #### **Works cited**
 
