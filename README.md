@@ -155,7 +155,7 @@ JavaScript
 
 ```js
 // Example of what the code might look like (Node.js)  
-const uupid\_lib \= require('uupid-generator');
+const uupid_lib = require('uupid');
 
 // Generate a new UUPID  
 const newUUPID = uupid_lib.generate();  
