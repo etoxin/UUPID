@@ -1,5 +1,3 @@
-
-
 # **UUPID: Universally Unique Pronounceable Identifier**
 
 ## **Human-Friendly Identifiers That Just Work**
